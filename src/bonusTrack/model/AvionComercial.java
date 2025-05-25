@@ -1,9 +1,9 @@
-package bonusTrack.controller;
+package bonusTrack.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AvionComercial extends Avion{
+public class AvionComercial extends Avion implements IServicio{
   
     private int cantidadAzafatas;
     private List<String> listaDeServicios; 
@@ -47,6 +47,28 @@ public class AvionComercial extends Avion{
         return "El Avion Comercial " + getModelo() + " está volando";
     }
 
-    
-    
+
+    @Override
+    public String servirComida() {
+        return "El avion " + getModelo() + " esta sirviendo comida";
+    }
+
+    @Override
+    public String darManta() {
+        return "El avion " + getModelo() + " esta otorgando mantas";
+    }
+
+    @Override
+    public String toString() {
+        return "AvionComercial{" +
+                "cantidadAzafatas=" + cantidadAzafatas +
+                ", listaDeServicios=" + listaDeServicios +
+                ", cantidadDeAsientos=" + cantidadDeAsientos +
+                ", capacidadDeCombustible=" + capacidadDeCombustible +
+                ", marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                '}';
+    }
+
+
 }

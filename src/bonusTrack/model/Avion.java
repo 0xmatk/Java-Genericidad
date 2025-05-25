@@ -1,4 +1,4 @@
-package bonusTrack.controller;
+package bonusTrack.model;
 
 public abstract class Avion {
     protected String modelo;
