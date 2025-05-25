@@ -1,4 +1,4 @@
-package bonusTrack.controller;
+package bonusTrack.model;
 
 public class Aeropuerto {
     protected String nombre;
@@ -11,7 +11,7 @@ public class Aeropuerto {
         this.codigoInternacional = codigoInternacional;
         this.capacidadDeOperacion = capacidadDeOperacion;
     }
-    
+
 
     public String getNombre() {
         return this.nombre;
@@ -41,13 +41,9 @@ public class Aeropuerto {
     @Override
     public String toString() {
         return "{" +
-            " nombre='" + getNombre() + "'" +
-            ", codigoInternacional='" + getCodigoInternacional() + "'" +
-            ", capacidadDeOperacion='" + getCapacidadDeOperacion() + "'" +
-            "}";
+                " nombre='" + getNombre() + "'" +
+                ", codigoInternacional='" + getCodigoInternacional() + "'" +
+                ", capacidadDeOperacion='" + getCapacidadDeOperacion() + "'" +
+                "}";
     }
-
-
-
-
 }

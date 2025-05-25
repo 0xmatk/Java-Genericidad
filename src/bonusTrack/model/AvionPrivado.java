@@ -1,8 +1,9 @@
-package bonusTrack.controller;
+package bonusTrack.model;
 
 
+import java.io.Serializable;
 
-public class AvionPrivado extends Avion{
+public class AvionPrivado extends Avion implements IServicio{
    
     private boolean tieneJacuzzi; 
     private String claveWifi; 
@@ -51,5 +52,28 @@ public class AvionPrivado extends Avion{
        return "El Avion Privado " + getModelo() + " está volando";
     }
 
-    
+    public String servirComida() {
+        return "El avion " + getModelo() + " esta sirviendo comida";
+    }
+
+    @Override
+    public String darManta() {
+        return "El avion " + getModelo() + " esta otorgando mantas";
+    }
+
+    public boolean verMundial(){
+         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "AvionPrivado{" +
+                "tieneJacuzzi=" + tieneJacuzzi +
+                ", claveWifi='" + claveWifi + '\'' +
+                ", cantidadDeAsientos=" + cantidadDeAsientos +
+                ", capacidadDeCombustible=" + capacidadDeCombustible +
+                ", marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                '}';
+    }
 }

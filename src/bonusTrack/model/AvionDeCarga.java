@@ -1,4 +1,4 @@
-package bonusTrack.controller;
+package bonusTrack.model;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,8 +47,23 @@ public class AvionDeCarga extends Avion{
         return "El Avion de Carga " + getModelo() + " está volando";
     }
 
-    
+    public void descargar(){
+         System.out.println("El avion de Carga " + getModelo() + " esta descargando");
+    }
 
-    
-    
+    public String ingresar(){
+        return "El avion de Carga " + getModelo() + " esta ingresando";
+    }
+
+    @Override
+    public String toString() {
+        return "AvionDeCarga{" +
+                "cantidadKilos=" + cantidadKilos +
+                ", productosATransportar=" + productosATransportar +
+                ", cantidadDeAsientos=" + cantidadDeAsientos +
+                ", capacidadDeCombustible=" + capacidadDeCombustible +
+                ", marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                '}';
+    }
 }
